@@ -10,7 +10,7 @@ export default function Welcome() {
            <View style={styles.containerLogo}>
                <Animatable.Image
                animation= 'flipInY'
-                   source={require('../../assets/logo3.png')}
+                   source={require('../../assets/logoFundoBranco.png')}
                    style={{width: '100%'}}
                    resizeMode="contain"
                />
@@ -21,6 +21,7 @@ export default function Welcome() {
                 <TouchableOpacity 
                     style={styles.registerButton} 
                     activeOpacity={0.8}
+                    onPress={()=> navigation.navigate('Register')}
                     >
                    <Text style = {styles.registerButtonText}>Cadastre-se</Text>
                 </TouchableOpacity>

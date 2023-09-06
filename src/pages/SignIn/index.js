@@ -7,8 +7,8 @@ export default function SignIn() {
     <View style={styles.container}>
       <View style={styles.image}>
       <Animatable.Image
-        animation='flipInY'
-        source={require('../../assets/logo3.png')}
+        animation='fadeIn' delay={500}
+        source={require('../../assets/logoFundoBranco.png')}
       />
       </View>
       <Animatable.View animation='fadeInUp' delay={500} style={styles.containerForm}>
@@ -16,12 +16,14 @@ export default function SignIn() {
         <TextInput
           placeholder='Digite seu email'
           placeholderTextColor={'#fff'}
+          keyboardType='email-address'
           style={styles.input}
         />
         <Text style={styles.title}>Senha</Text>
         <TextInput
           placeholder='Digite sua senha'
           placeholderTextColor={'#fff'}
+          secureTextEntry={true}
           style={styles.input}
         />
 
